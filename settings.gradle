@@ -1,0 +1,1 @@
+include ':app', ':network_xt', ':post_network_xt', ':doc_operate_xt', ':slidingmenu_xt', ':zxing_xt', ':butterknife_xt', ':sharesdk_xt', ':sharesdk_weather_xt', ':qq_support_xt'
