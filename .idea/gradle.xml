@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="C:\Program Files\Android\Android Studio\gradle\gradle-2.14.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/butterknife_xt" />
+            <option value="$PROJECT_DIR$/doc_operate_xt" />
+            <option value="$PROJECT_DIR$/network_xt" />
+            <option value="$PROJECT_DIR$/post_network_xt" />
+            <option value="$PROJECT_DIR$/qq_support_xt" />
+            <option value="$PROJECT_DIR$/sharesdk_weather_xt" />
+            <option value="$PROJECT_DIR$/sharesdk_xt" />
+            <option value="$PROJECT_DIR$/slidingmenu_xt" />
+            <option value="$PROJECT_DIR$/zxing_xt" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
