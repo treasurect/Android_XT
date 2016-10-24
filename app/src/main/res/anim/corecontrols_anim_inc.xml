@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--一个动画定义的集合，使用set来包含多个动画-->
+    <!--如果只有一个动画效果，直接写一个指定就可以了-->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--所有动画都要设定duration属性 ，代表时间-->
+    <!--fromYDelta,toYDelta 表示沿Y轴移动的距离-->
+    <!--translate   一个传递的过程-->
+    <translate
+        android:duration = "1000"
+        android:fromYDelta="0"
+        android:toYDelta="-200"/>
+
+
+    <!--startOffset代表动画执行多长时间后，在执行alpha-->
+    <!--fromAlpha，toAlpha   表示透明度显示-->
+    <alpha
+        android:startOffset = "500"
+        android:duration = "1000"
+        android:fromAlpha="1"
+        android:toAlpha="0"/>
+</set>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.treasure_ct.android_xt">
+
+    <!-- 权限 -->
+    <!-- 权限 -->
+    <!-- 权限 -->
+    <!-- 权限 -->
+    <!-- 权限 -->
+    <!-- 权限 -->
+    <!-- 权限 -->
+    <!-- 权限 -->
+    <!-- 权限 -->
+    <!-- 权限 -->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- 自定义权限 -->
+    <permission android:name="treasure_ct"/>
+
+    <uses-permission android:name="treasure_ct"/>
+    <!-- 百度地图开发权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- 高德开发权限 -->
+    <!-- 高德开发权限 -->
+    <!-- 高德开发权限 -->
+    <!-- 高德开发权限 -->
+    <!-- 高德开发权限 -->
+    <!-- 高德开发权限 -->
+    <!-- 高德开发权限 -->
+    //地图包、搜索包需要的基础权限
+
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- <uses-permission android:name="android.permission.BROADCAST_SMS"></uses-permission> -->
+    <!-- android:supportsRtl="true"  强制竖屏 -->
+    <application
+        android:name=".XTApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_main4"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- 百度地图开发密钥 -->
+        <!-- 百度开发密钥 -->
+        <!-- 百度开发密钥 -->
+        <!-- 百度开发密钥 -->
+        <!-- 百度开发密钥 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="MwLQD9nMD50TELo14anlncRnOfqpRAUX"/>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="859dc10e4cc1aa54165f3c9575a712f0">
+        </meta-data>
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+        <!-- Activity -->
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <!--  -->
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".studyfragment.basedcontrols.TextViewActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.ButtonActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.EditTextActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.ImageViewActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.LayoutActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.layout.FrameLayoutActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.layout.LinearLayoutActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.layout.RelativeLayoutActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.layout.PercentRelativeLayoutActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.layout.V7GridLayoutActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.layout.CalculatorLayoutActivity"/>
+        <activity android:name=".studyfragment.basedcontrols.layout.CalculatorLayout2Activity"/>
+        <activity android:name=".studyfragment.simplecontrols.CheckBoxActivity"/>
+        <activity android:name=".studyfragment.simplecontrols.RadioButtonActivity"/>
+        <activity android:name=".studyfragment.simplecontrols.SpinnerActivity"/>
+        <activity android:name=".studyfragment.simplecontrols.AutoCompleteActivity"/>
+        <activity android:name=".studyfragment.simplecontrols.ScrollViewActivity"/>
+        <activity android:name=".studyfragment.components.ActivityActivity"/>
+        <activity android:name=".studyfragment.components.activity.ImageActivity"/>
+        <activity android:name=".studyfragment.loadingways.HandlerActivity"/>
+        <activity android:name=".studyfragment.loadingways.handler.Handler_LoopNum"/>
+        <activity android:name=".studyfragment.loadingways.handler.Handler_NetWork_Pager"/>
+        <activity android:name=".studyfragment.loadingways.handler.Handler_NetWork_Image"/>
+        <activity android:name=".studyfragment.loadingways.AsyncTaskActivity"/>
+        <activity android:name=".studyfragment.loadingways.asynctask.AsyncTask_SimpleUse"/>
+        <activity android:name=".studyfragment.loadingways.asynctask.AsyncTask_NetWork"/>
+        <activity android:name=".studyfragment.loadingways.asynctask.AsyncTask_DownLoad_Image"/>
+        <activity android:name=".studyfragment.corecontrols.ListViewActivity"/>
+        <activity android:name=".studyfragment.corecontrols.listview.ListView_Array"/>
+        <activity android:name=".studyfragment.corecontrols.listview.ListView_Simple1"/>
+        <activity android:name=".studyfragment.corecontrols.listview.ListView_Simple2"/>
+        <activity android:name=".studyfragment.corecontrols.listview.ListView_Base"/>
+        <activity android:name=".studyfragment.simplecontrols.AlertDialogActivity"/>
+        <activity android:name=".studyfragment.basedfunction.MenuActivity"/>
+        <activity android:name=".studyfragment.basedfunction.NotificationActivity"/>
+        <activity android:name=".studyfragment.storage.SharedPreferencesActivity"/>
+        <activity android:name=".studyfragment.storage.FileActivity"/>
+        <activity android:name=".studyfragment.storage.File_SDCardActivity"/>
+        <activity android:name=".studyfragment.storage.SQLiteActivity"/>
+        <activity android:name=".studyfragment.simpledemo.calculator_xt.CalculatorActivity"/>
+        <activity android:name=".studyfragment.simpledemo.explorer_xt.ExplorerActivity"/>
+        <activity android:name=".studyfragment.simpledemo.netease_xt.NeteaseActivity"/>
+        <activity android:name=".studyfragment.simpledemo.netease_xt.NewsInfoActivtiy"/>
+        <activity android:name=".studyfragment.simpledemo.movielist_xt.MovieListActivity"/>
+        <activity android:name=".studyfragment.simpledemo.movielist_xt.Minfo_Activity"/>
+        <activity android:name=".studyfragment.simpledemo.movielist_xt.MStoryActivity"/>
+        <activity android:name=".studyfragment.simpledemo.shopcar_xt.ShopCarActivity"/>
+        <activity android:name=".studyfragment.simpledemo.file_explorer_xt.LoadingActivity"/>
+        <activity android:name=".studyfragment.simpledemo.file_explorer_xt.LoginActivity"/>
+        <activity android:name=".studyfragment.simpledemo.file_explorer_xt.Register_Activity"/>
+        <activity android:name=".studyfragment.simpledemo.file_explorer_xt.File_ExplorerActivity"/>
+        <activity android:name=".studyfragment.components.ContentProviderActivity"/>
+        <activity android:name=".studyfragment.simpledemo.keymanager_xt.KeyManagerActivity"/>
+        <activity android:name=".studyfragment.simpledemo.keymanager_xt.LoginActivity"/>
+        <activity android:name=".studyfragment.simpledemo.keymanager_xt.RegisterActivity"/>
+        <activity android:name=".studyfragment.components.contentprovider.ContentProvider_Custom"/>
+        <activity android:name=".studyfragment.components.contentprovider.CallRecordsActivity"/>
+        <activity android:name=".studyfragment.components.contentprovider.AddressListActivity"/>
+        <activity android:name=".studyfragment.loadingways.Loader.LoaderContacts"/>
+        <activity android:name=".studyfragment.loadingways.Loader.LoaderDuanzi"/>
+        <activity android:name=".studyfragment.loadingways.LoaderActivity"/>
+        <activity android:name=".studyfragment.corecontrols.AnimationActivity"/>
+        <activity android:name=".studyfragment.components.service.downloadfile.DownloadFileActivity"/>
+        <activity android:name=".studyfragment.corecontrols.animation.view.View_Anim_Activity"/>
+        <activity android:name=".studyfragment.corecontrols.animation.attribute.Attribute_Anim_Activity"/>
+        <activity android:name=".studyfragment.corecontrols.Fragment_UsedActivity"/>
+        <activity android:name=".studyfragment.corecontrols.fragment.timedemo.FragmentDemo1"/>
+        <activity android:name=".studyfragment.corecontrols.fragment.weibo_demo.Weibo_Fang_Demo"/>
+        <activity android:name=".studyfragment.simpledemo.newstoday_xt.NewsTodayActivity"/>
+        <activity android:name=".studyfragment.corecontrols.ViewPagerActivity"/>
+        <activity android:name=".studyfragment.corecontrols.viewpager.loading.ViewPager_LoadingPage"/>
+        <activity android:name=".studyfragment.corecontrols.viewpager.mainpager.ViewPager_MainPager"/>
+        <activity android:name=".studyfragment.corecontrols.viewpager.tablayout.TabLayoutActivity"/>
+        <activity android:name=".studyfragment.corecontrols.viewpager.tablayout.TabLayout2Activity"/>
+        <activity android:name=".studyfragment.corecontrols.viewpager.tabhost.TabHostActivity"/>
+        <activity android:name=".studyfragment.corecontrols.recyclerview.RecyclerViewListActivity"/>
+        <activity android:name=".studyfragment.corecontrols.recyclerview.RecyclerViewGridVerActivity"/>
+        <activity android:name=".studyfragment.corecontrols.recyclerview.RecyclerViewGridHorActivity"/>
+        <activity android:name=".studyfragment.corecontrols.SlidingViewActivtiy"/>
+        <activity android:name=".studyfragment.corecontrols.sliding.Sliding_Normal_Activity"/>
+        <activity android:name=".studyfragment.corecontrols.sliding.SlidingMenu_Activity"/>
+        <activity
+            android:name=".studyfragment.corecontrols.sliding.DrawerLayoutActivity"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity
+            android:name=".studyfragment.loadingways.handler.HandlerChatActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".studyfragment.basedfunction.actionbar.ActionBar_SimpleUse_Activity"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow">
+            </meta-data>
+        </activity>
+        <activity android:name=".studyfragment.basedfunction.actionbar.ActionBar_Spinner_Activity"/>
+        <activity android:name=".studyfragment.basedfunction.actionbar.ActionBar_Search_Activity"/>
+        <activity android:name=".studyfragment.basedfunction.ActionBarActivity"/>
+        <activity
+            android:name=".studyfragment.basedfunction.actionbar.ToolBarActivity"
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
+        <activity android:name=".studyfragment.components.BroadcastRecriverActivity"/>
+        <activity android:name=".studyfragment.components.ServiceActivity"/>
+        <activity android:name=".studyfragment.components.service.musicdemo.ServiceMusicDemo"/>
+        <activity android:name=".studyfragment.components.service.music_binddemo.MusicBindActivity"/>
+        <activity android:name=".studyfragment.simpledemo.contact_backup.BackupActivity"/>
+        <activity android:name=".studyfragment.corecontrols.WebViewActivity"/>
+        <activity android:name=".studyfragment.corecontrols.webview.WebView_NetLoad"/>
+        <activity android:name=".studyfragment.corecontrols.webview.WebView_JS"/>
+        <activity android:name=".studyfragment.corecontrols.webview.WebView_LocLoad"/>
+        <activity android:name=".studyfragment.corecontrols.webview.WebView_StrLoad"/>
+        <activity android:name=".studyfragment.corecontrols.PopUpWindowActivity"/>
+        <activity android:name=".studyfragment.corecontrols.RecyclerViewActivity"/>
+        <activity android:name=".studyfragment.corecontrols.popupwindow.PW_showAsDropDownActivity"/>
+        <activity android:name=".studyfragment.corecontrols.sliding.SlidingDelListItemActivity"/>
+        <activity android:name=".studyfragment.corecontrols.popupwindow.PW_showAtLocationActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.EventDestributionActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.MapActivity"/>
+        <activity
+            android:name=".studyfragment.seniorcontrols.map.GaodeMap"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity
+            android:name=".studyfragment.seniorcontrols.map.BaiduMap"
+            android:theme="@style/AppThemeNoActionBar"/>
+        <activity android:name=".studyfragment.seniorcontrols.eventdistribution.EventTransActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.eventdistribution.Scroll_ListView_Finish1"/>
+        <activity android:name=".studyfragment.seniorcontrols.eventdistribution.Scroll_ListView_Finish2"/>
+        <activity android:name=".studyfragment.seniorcontrols.eventdistribution.SlideActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.CustomViewActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.customview.ExtendView_AliPayEdit"/>
+        <activity android:name=".studyfragment.seniorcontrols.customview.ExtendsView_NotePadEdit"/>
+        <activity android:name=".studyfragment.seniorcontrols.customview.CoupleViewGroup"/>
+        <activity android:name=".studyfragment.seniorcontrols.customview.FlowActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.customview.Moving_WaterActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.customview.FullCustomViewDemo"/>
+        <activity android:name=".studyfragment.seniorcontrols.customview.FullSizeActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.customview.Full_ShapeActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.customview.BalloonsActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.ModelAdaptationActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.eventdistribution.Scroll_HScroll_Finish"/>
+        <activity android:name=".studyfragment.seniorcontrols.camera.CameraPhoto"/>
+        <activity android:name=".studyfragment.seniorcontrols.camera.CameraSurfaceView"/>
+        <activity android:name=".studyfragment.seniorcontrols.CameraActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.camera.QR_Code"/>
+        <activity android:name=".studyfragment.seniorcontrols.SensorActivty"/>
+        <activity android:name=".studyfragment.seniorcontrols.sensor.LightSensor"/>
+        <activity android:name=".studyfragment.seniorcontrols.sensor.GravitySensor"/>
+        <activity android:name=".studyfragment.seniorcontrols.sensor.AcceleratedSpeedSensor"/>
+        <activity android:name=".studyfragment.seniorcontrols.CryptoActivity"/>
+        <activity android:name=".studyfragment.seniorcontrols.crypto.Base64Crypto"/>
+        <activity android:name=".studyfragment.seniorcontrols.crypto.URLEncodeing"/>
+        <activity android:name=".studyfragment.seniorcontrols.crypto.GZipCrypto"/>
+        <activity android:name=".studyfragment.seniorcontrols.crypto.DesCrypto"/>
+        <activity android:name=".studyfragment.seniorcontrols.crypto.AesCrypto"/>
+        <activity android:name=".studyfragment.seniorcontrols.crypto.RsaCrypto"/>
+        <activity android:name=".studyfragment.seniorcontrols.crypto.RsaCrypto_Ceshi"/>
+
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+        <!-- Service -->
+
+        <service android:name=".studyfragment.components.service.musicdemo.MusicService"/>
+        <service
+        android:name=".studyfragment.components.service.downloadfile.DownloadService"
+        android:enabled="true"
+        android:exported="false">
+        </service>
+        <service
+        android:name=".studyfragment.components.service.downloadfile.DownloadfileIntentService"
+        android:exported="false">
+        </service>
+        <service
+        android:name=".studyfragment.components.service.music_binddemo.MusicBindService"
+        android:enabled="true"
+        android:exported="false">
+        </service>
+        <service
+        android:name=".studyfragment.simpledemo.contact_backup.BackupService"
+        android:enabled="true"
+        android:exported="true">
+        </service>
+
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+        <!-- BroadcastReceiver -->
+
+
+        <!-- 清单文件注册广播接收者，属于静态注册 -->
+        <receiver android:name=".studyfragment.components.broadcastreceiver.NetWorkChangedReceiver">
+            <intent-filter>
+
+                <!-- action内部指定的内容，就是广播的信息类型 -->
+                <!-- 代表广播接收者接受网络状态变化的广播Intent -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+        android:name=".studyfragment.components.broadcastreceiver.Normal0Receiver"
+        android:enabled="true"
+        android:exported="false">
+            <intent-filter android:priority="3">
+                <action android:name="treasure012"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+        android:name=".studyfragment.components.broadcastreceiver.Normal1Receiver"
+        android:enabled="true"
+        android:exported="false">
+            <intent-filter android:priority="6">
+                <action android:name="treasure012"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+        android:name=".studyfragment.components.broadcastreceiver.SmsReceiver"
+        android:enabled="true"
+        android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+        android:name=".studyfragment.components.broadcastreceiver.Ordered0Recevide"
+        android:enabled="true"
+        android:exported="false">
+            <intent-filter>
+                <action android:name="treasure_ct123"/>
+            </intent-filter>
+        </receiver>
+        <!-- permission 属性 -->
+        <receiver
+        android:name=".studyfragment.components.broadcastreceiver.Ordered1Recevider"
+        android:enabled="true"
+        android:exported="false"
+        android:permission="treasure_ct5">
+            <intent-filter>
+                <action android:name="treasure_ct123"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+        android:name=".studyfragment.components.broadcastreceiver.BootReciver"
+        android:enabled="true"
+        android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+        android:name=".studyfragment.simpledemo.contact_backup.Backup_BootReceiver"
+        android:enabled="true"
+        android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+        android:name=".studyfragment.simpledemo.contact_backup.Backup_NetworkReceiver"
+        android:enabled="true"
+        android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+        <!-- ContentProvider -->
+
+        <provider
+        android:name=".studyfragment.components.contentprovider.MyContentProvider"
+        android:authorities="com.treasure_ct.android_xt.components.contentprovider.CustomContentProvider;treasure"
+        android:enabled="true"
+        android:exported="true">
+        </provider>
+        <provider
+        android:name=".studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
+        android:authorities="com.treasure_ct.android_xt.studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
+        android:enabled="true"
+        android:exported="true">
+        </provider>
+
+    </application>
+
+</manifest>

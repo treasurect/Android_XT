@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_corecontrols_sliding_normal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.treasure_ct.android_xt.studyfragment.corecontrols.sliding.Sliding_Normal_Activity">
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#0ff"
+        android:id="@+id/menu_show">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sliding_menu_listView"></ListView>
+    </LinearLayout>
+    <com.treasure_ct.android_xt.studyfragment.corecontrols.sliding.widgets.SlidingLinnearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ff0"
+        android:id="@+id/content_show">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sliding_content_listView"/>
+    </com.treasure_ct.android_xt.studyfragment.corecontrols.sliding.widgets.SlidingLinnearLayout>
+
+</FrameLayout>

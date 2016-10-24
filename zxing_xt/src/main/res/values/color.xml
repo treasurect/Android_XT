@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="viewfinder_mask">#9999</color>
+    <color name="result_view">#900</color>
+    <color name="possible_result_points">#0f0</color>
+</resources>

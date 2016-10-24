@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<set xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--缩放视图，必须包含x,y,的缩放设置-->
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXScale="1"
+    android:toXScale="2"
+    android:fromYScale="1"
+    android:toYScale="2"
+    android:pivotY="50%"
+    android:pivotX="50%"/>
+<!--</set>-->
+
+<!-- android:fromXScale="1"
+    android:toXScale="2"
+    android:fromYScale="1"
+    android:toYScale="2"
+    表示 XY轴分别放大两倍-->

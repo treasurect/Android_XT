@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_extend_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.treasure_ct.android_xt.studyfragment.seniorcontrols.customview.ExtendView_AliPayEdit">
+    <com.treasure_ct.android_xt.studyfragment.seniorcontrols.customview.widgets.AliPayEditText
+        android:id="@+id/extends_alipay_ed0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#00f"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:inputType="number"
+        android:maxLength="1"
+        android:nextFocusRight="@+id/extends_alipay_ed1"/>
+        <com.treasure_ct.android_xt.studyfragment.seniorcontrols.customview.widgets.AliPayEditText
+            android:id="@+id/extends_alipay_ed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00f"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:nextFocusRight="@+id/extends_alipay_ed2"
+            android:nextFocusLeft="@id/extends_alipay_ed0"/>
+        <com.treasure_ct.android_xt.studyfragment.seniorcontrols.customview.widgets.AliPayEditText
+            android:id="@+id/extends_alipay_ed2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00f"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:nextFocusLeft="@id/extends_alipay_ed1"
+            android:nextFocusRight="@+id/extends_alipay_ed3"/>
+    <com.treasure_ct.android_xt.studyfragment.seniorcontrols.customview.widgets.AliPayEditText
+        android:id="@+id/extends_alipay_ed3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#00f"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:inputType="numberPassword"
+        android:maxLength="1"
+        android:nextFocusLeft="@id/extends_alipay_ed2"/>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_seniorcontrols_customview_coupleviewgroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.treasure_ct.android_xt.studyfragment.seniorcontrols.customview.CoupleViewGroup">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content_list"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_indicator"
+        android:layout_gravity="center"
+        android:background="#9999"/>
+    <com.treasure_ct.android_xt.studyfragment.seniorcontrols.customview.widgets.AlphaIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+        android:id="@+id/alpha_layout">
+    </com.treasure_ct.android_xt.studyfragment.seniorcontrols.customview.widgets.AlphaIndicator>
+</FrameLayout>

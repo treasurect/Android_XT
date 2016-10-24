@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义属性的资源，可以给一个控件指定属性-->
+    <!--name代表  指定哪一个 自定义View的类名-->
+    <declare-styleable name="NotePadEditText">
+        <attr name="lineColor" format="color"/>
+        <!--只要和尺寸有关  搜应该是dimension  可以使用xxxdp-->
+        <attr name="strokeWidth" format="dimension"/>
+    </declare-styleable>
+</resources>

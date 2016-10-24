@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:background="#ce9b9b"
+    tools:context="com.treasure_ct.keymanager_xt.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="密码管理器"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#ea4d0a"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:divider="#03d7ef"
+        android:dividerHeight="1dp"
+        android:background="@drawable/activity_simpledemo_keymanager_edittext_bg"
+        android:id="@+id/key_manager_listView"/>
+</LinearLayout>

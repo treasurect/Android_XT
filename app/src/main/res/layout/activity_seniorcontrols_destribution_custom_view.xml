@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_seniorcontrols_destribution_custom_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.treasure_ct.android_xt.studyfragment.seniorcontrols.CustomViewActivity">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="继承View alipay"
+        android:id="@+id/extends_alipay"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="继承View notepad"
+        android:id="@+id/extends_notepad"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="组合方式 电话本拖拽实现"
+        android:id="@+id/couple_phonebook"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="组合方式 流式布局"
+        android:id="@+id/couple_flowlayout"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="组合方式 瀑布流"
+        android:id="@+id/couple_movingwater"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="完全自定义 圆矩形绘制"
+        android:id="@+id/fullcustom_rectcircle"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="完全自定义 图片渲染"
+        android:id="@+id/fullcustom_picture"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="完全自定义 "
+        android:id="@+id/fullcustom_a"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="气球爆炸"
+        android:id="@+id/balloon_boom"/>
+</LinearLayout>

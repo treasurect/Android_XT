@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sliding_activtiy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.treasure_ct.android_xt.studyfragment.corecontrols.SlidingViewActivtiy">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sliding_drawerlayout"
+        android:text="DrawerLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="128dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sliding_menu"
+        android:text="sliding_menu"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="67dp"
+        android:layout_above="@+id/sliding_drawerlayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sliding_normal"
+        android:text="原始的方法"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_alignBaseline="@+id/sliding_menu"
+        android:layout_alignBottom="@+id/sliding_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/slidingdel"
+        android:text="qq侧滑删除"
+        android:layout_above="@+id/sliding_menu"
+        android:layout_toRightOf="@+id/sliding_normal"
+        android:layout_toEndOf="@+id/sliding_normal"
+        android:layout_marginBottom="60dp"/>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_seniorcontrols_eventdestribution"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.treasure_ct.android_xt.studyfragment.seniorcontrols.EventDestributionActivity">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击事件的传递"
+        android:id="@+id/event_trans"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ScrollView嵌套ListView不提倡版"
+        android:id="@+id/Scroll_List1"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ScrollView嵌套ListView提倡版"
+        android:id="@+id/Scroll_List2"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ScrollView嵌套HScrollView"
+        android:id="@+id/Scroll_HSroll"/>
+</LinearLayout>

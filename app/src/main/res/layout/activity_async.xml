@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center">
+   <Button
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:text="简单使用"
+       android:id="@+id/async_simpleuse"
+       android:layout_margin="10dp"
+       android:background="@drawable/demo_key_bgsel"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="联网获取新闻"
+        android:id="@+id/async_network"
+        android:layout_margin="10dp"
+        android:background="@drawable/demo_key_bgsel"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="获取图片"
+        android:id="@+id/async_image"
+        android:layout_margin="10dp"
+        android:background="@drawable/demo_key_bgsel"/>
+</LinearLayout>

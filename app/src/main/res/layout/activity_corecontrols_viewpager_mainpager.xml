@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".studyfragment.corecontrols.viewpager.mainpager.ViewPager_MainPager">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/mainpager_tab_bar_bottom"
+            android:layout_width="80dp"
+            android:layout_height="5dp"
+            android:layout_gravity="bottom"
+            android:background="#f00"/>
+    <RadioGroup
+        android:id="@+id/mainpager_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            style="@style/ViewPager_MainPager_Item"
+            android:text="首页"
+            android:id="@+id/mainpager_tab_item0"/>
+        <RadioButton
+            style="@style/ViewPager_MainPager_Item"
+            android:text="娱乐"
+            android:id="@+id/mainpager_tab_item1"/>
+        <RadioButton
+            style="@style/ViewPager_MainPager_Item"
+            android:text="新闻"
+            android:id="@+id/mainpager_tab_item2"/>
+        <RadioButton
+            style="@style/ViewPager_MainPager_Item"
+            android:text="文化"
+            android:id="@+id/mainpager_tab_item3"/>
+    </RadioGroup>
+    </FrameLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/top_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

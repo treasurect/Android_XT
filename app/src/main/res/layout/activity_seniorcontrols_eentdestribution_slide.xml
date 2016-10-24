@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_seniorcontrols_eentdestribution_slide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.treasure_ct.android_xt.studyfragment.seniorcontrols.eventdistribution.SlideActivity">
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:background="#00f"
+        android:orientation="vertical">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F00"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</FrameLayout>

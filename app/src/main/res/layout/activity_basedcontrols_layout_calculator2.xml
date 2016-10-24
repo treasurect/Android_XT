@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:columnCount="4"
+    app:rowCount="6"
+    android:id="@+id/grid">
+
+    <TextView
+        android:id="@+id/input"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/calculator_input_bg"
+        android:gravity="right|bottom"
+        android:padding="30dp"
+        android:textSize="50sp"
+        app:layout_columnSpan="4"
+        app:layout_columnWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="/"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="X"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="~"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="7"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="8"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="9"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="4"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="5"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="6"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="+"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="="
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        app:layout_rowSpan="2"/>
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_columnSpan="2"
+        app:layout_rowWeight="1" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="@drawable/calculator_key_bg"
+        android:gravity="center"
+        android:text="."
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+</android.support.v7.widget.GridLayout>

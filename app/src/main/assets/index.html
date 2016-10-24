@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello 世界</title>
+        <script type="application/javascript">
+            function showAndroidToast(msg){
+                //通过window.xxx可以调用到JAVA的类，通过webView.addJavascriptInterface
+                //第二个参数指定，
+                window.androidxt.showToast(msg);
+            }
+            function showDevice(){
+                var txt = document.getElementById("device_name");
+                if(txt != null){
+                    txt.innerHTML = window.androidxt.getDeviceModel();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        treasure你最爱的人<br/>
+        <a href="app1/index.html">跳转到app1</a><br/>
+        <img src="images/icon_main3.png"><br/>
+        <input type="button" value="显示Toast" onclick="showAndroidToast('Hello')"/>
+    <div id="device_name">
+        <input type="button" value="获取手机型号" onclick="">
+    </div>
+    <input />
+    </body>
+</html>

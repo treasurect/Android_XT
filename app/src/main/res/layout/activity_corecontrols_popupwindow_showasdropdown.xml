@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_corecontrols_popupwindow_showasdropdown"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.treasure_ct.android_xt.studyfragment.corecontrols.popupwindow.PW_showAsDropDownActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#666666"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="返回"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:onClick="btnReturn"
+            android:id="@+id/popupwindow_showasdropdown_return"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10个app底部动画"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:onClick="btn10App"
+            android:id="@+id/popupwindow_showasdropdown_10app"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="菜单"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:textColor="#ffffff"
+            android:onClick="btnMenu"
+            android:id="@+id/popupwindow_showasdropdown_menu"/>
+
+    </LinearLayout>
+
+</LinearLayout>

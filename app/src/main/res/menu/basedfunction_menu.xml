@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/basedfunction_action_settings"
+        android:title="设置"/>
+    <item
+        android:id="@+id/basedfunction_action_help"
+        android:title="帮助"/>
+    <item android:id="@+id/basedfunction_action_icon"
+        android:title="icon"
+        app:showAsAction="always"
+        android:icon="@mipmap/icon_main10"/>
+</menu>

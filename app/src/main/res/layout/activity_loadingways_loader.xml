@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <Button
+        android:text="联系人"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/loader_duanzi"
+        android:background="@drawable/demo_key_bgsel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="107dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="146dp"/>
+
+    <Button
+        android:text="段子"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/loader_contacts"
+        android:background="@drawable/demo_key_bgsel"
+        android:layout_above="@+id/loader_duanzi"
+        android:layout_toLeftOf="@+id/loader_duanzi"
+        android:layout_toStartOf="@+id/loader_duanzi"
+        android:layout_marginRight="49dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="56dp"/>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<com.treasure_ct.android_xt.studyfragment.seniorcontrols.eventdistribution.widgets.Eventlayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.treasure_ct.android_xt.studyfragment.seniorcontrols.eventdistribution.EventTransActivity">
+    <com.treasure_ct.android_xt.studyfragment.seniorcontrols.eventdistribution.widgets.EventButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点点点"/>
+
+</com.treasure_ct.android_xt.studyfragment.seniorcontrols.eventdistribution.widgets.Eventlayout>

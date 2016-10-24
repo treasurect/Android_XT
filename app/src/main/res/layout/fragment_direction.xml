@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:background="@mipmap/icon_suolong3"
+              android:gravity="center"
+             tools:context="com.treasure_ct.android_xt.studyfragment.DirectionFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#f50370"
+        android:textStyle="italic"
+        android:text="\n卧\n薪\n尝\n胆\n，\n三\n千\n越\n甲\n可\n吞\n吴"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#f50370"
+        android:textStyle="italic"
+        android:layout_marginLeft="20dp"
+        android:text="苦\n心\n人\n，\n天\n不\n负\n"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#f50370"
+        android:layout_marginLeft="100dp"
+        android:textStyle="italic"
+        android:text="\n破\n釜\n沉\n舟\n，\n百\n二\n秦\n关\n终\n归\n楚"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#f50370"
+        android:textStyle="italic"
+        android:layout_marginLeft="20dp"
+        android:text="有\n事\n者\n，\n事\n竟\n成\n"/>
+
+</LinearLayout>

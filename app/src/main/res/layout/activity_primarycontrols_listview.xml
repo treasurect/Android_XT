@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/listview_array"
+        android:text="数组列表"
+        android:background="@drawable/demo_key_bgsel"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/listview_sim1"
+        android:text="简单列表1"
+        android:background="@drawable/demo_key_bgsel"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/listview_sim2"
+        android:text="简单列表2"
+        android:background="@drawable/demo_key_bgsel"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/listview_base"
+        android:text="Base适配器"
+        android:background="@drawable/demo_key_bgsel"/>
+
+</LinearLayout>

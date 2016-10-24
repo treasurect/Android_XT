@@ -1,0 +1,14 @@
+<!--ujhy hujy  <?xml version="1.0" encoding="utf-8"?>-->
+<!--逐帧动画。。。。就是在指定时间内，依稀显示每一张图片，形成连续的动画效果-->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@mipmap/d00"/>
+    <item android:duration="100" android:drawable="@mipmap/d01"/>
+    <item android:duration="100" android:drawable="@mipmap/d02"/>
+    <item android:duration="100" android:drawable="@mipmap/d03"/>
+    <item android:duration="100" android:drawable="@mipmap/d04"/>
+    <item android:duration="100" android:drawable="@mipmap/d05"/>
+    <item android:duration="100" android:drawable="@mipmap/d06"/>
+    <item android:duration="100" android:drawable="@mipmap/d07"/>
+    <item android:duration="100" android:drawable="@mipmap/d08"/>
+    <item android:duration="100" android:drawable="@mipmap/d09"/>
+</animation-list>

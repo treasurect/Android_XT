@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#001"
+    android:gravity="center">
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/loop_num"
+        android:text="循环数"
+        android:background="@drawable/demo_key_bgsel"
+        android:layout_margin="10dp"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/net_pager"
+        android:text="加载网页"
+        android:layout_margin="10dp"
+        android:background="@drawable/demo_key_bgsel"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/net_image"
+        android:layout_margin="10dp"
+        android:text="加载图片"
+        android:background="@drawable/demo_key_bgsel"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/chat_robot"
+        android:layout_margin="10dp"
+        android:text="聊天机器人"
+        android:background="@drawable/demo_key_bgsel"/>
+
+</LinearLayout>
