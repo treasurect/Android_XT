@@ -6,11 +6,13 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/butterknife_xt/butterknife_xt.iml" filepath="$PROJECT_DIR$/butterknife_xt/butterknife_xt.iml" />
       <module fileurl="file://$PROJECT_DIR$/doc_operate_xt/doc_operate_xt.iml" filepath="$PROJECT_DIR$/doc_operate_xt/doc_operate_xt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/im_huanxin_xt/im_huanxin_xt.iml" filepath="$PROJECT_DIR$/im_huanxin_xt/im_huanxin_xt.iml" />
       <module fileurl="file://$PROJECT_DIR$/network_xt/network_xt.iml" filepath="$PROJECT_DIR$/network_xt/network_xt.iml" />
       <module fileurl="file://$PROJECT_DIR$/post_network_xt/post_network_xt.iml" filepath="$PROJECT_DIR$/post_network_xt/post_network_xt.iml" />
       <module fileurl="file://$PROJECT_DIR$/qq_support_xt/qq_support_xt.iml" filepath="$PROJECT_DIR$/qq_support_xt/qq_support_xt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharesdk_share_xt/sharesdk_share_xt.iml" filepath="$PROJECT_DIR$/sharesdk_share_xt/sharesdk_share_xt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharesdk_sms_xt/sharesdk_sms_xt.iml" filepath="$PROJECT_DIR$/sharesdk_sms_xt/sharesdk_sms_xt.iml" />
       <module fileurl="file://$PROJECT_DIR$/sharesdk_weather_xt/sharesdk_weather_xt.iml" filepath="$PROJECT_DIR$/sharesdk_weather_xt/sharesdk_weather_xt.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sharesdk_xt/sharesdk_xt.iml" filepath="$PROJECT_DIR$/sharesdk_xt/sharesdk_xt.iml" />
       <module fileurl="file://$PROJECT_DIR$/slidingmenu_xt/slidingmenu_xt.iml" filepath="$PROJECT_DIR$/slidingmenu_xt/slidingmenu_xt.iml" />
       <module fileurl="file://$PROJECT_DIR$/zxing_xt/zxing_xt.iml" filepath="$PROJECT_DIR$/zxing_xt/zxing_xt.iml" />
     </modules>

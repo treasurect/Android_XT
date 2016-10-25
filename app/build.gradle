@@ -33,7 +33,11 @@ android {
     productFlavors {
     }
 }
-
+repositories{
+    flatDir{
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -47,9 +51,11 @@ dependencies {
     compile files('libs/AMap3DMap_4.0.1_AMapSearch_3.5.0_AMapLocation_3.0.0_20160927.jar')
     compile project(':zxing_xt')
     compile project(':butterknife_xt')
-    compile project(':sharesdk_xt')
+    compile project(':sharesdk_share_xt')
     compile project(':sharesdk_weather_xt')
     compile project(':qq_support_xt')
+    compile project(':sharesdk_sms_xt')
+    compile project(':im_huanxin_xt')
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:gridlayout-v7:24.2.1'
     compile 'com.github.stuxuhai:jpinyin:1.1.7'
@@ -60,4 +66,6 @@ dependencies {
     compile 'org.xutils:xutils:3.3.36'
     compile 'org.greenrobot:eventbus:3.0.0'
     testCompile 'junit:junit:4.12'
+    compile name: 'SMSSDK-2.1.2', ext: 'aar'
+    compile name: 'SMSSDKGUI-2.1.2', ext: 'aar'
 }

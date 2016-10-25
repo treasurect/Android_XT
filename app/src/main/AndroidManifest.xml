@@ -54,6 +54,18 @@
     <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
+    <!-- 短信验证权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <!-- <uses-permission android:name="android.permission.BROADCAST_SMS"></uses-permission> -->
     <!-- android:supportsRtl="true"  强制竖屏 -->
     <application
@@ -91,6 +103,11 @@
         <!-- Activity -->
         <!-- Activity -->
 
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -180,25 +197,25 @@
         <activity android:name=".studyfragment.corecontrols.sliding.Sliding_Normal_Activity"/>
         <activity android:name=".studyfragment.corecontrols.sliding.SlidingMenu_Activity"/>
         <activity
-            android:name=".studyfragment.corecontrols.sliding.DrawerLayoutActivity"
-            android:theme="@style/AppThemeNoActionBar"/>
+        android:name=".studyfragment.corecontrols.sliding.DrawerLayoutActivity"
+        android:theme="@style/AppThemeNoActionBar"/>
         <activity
-            android:name=".studyfragment.loadingways.handler.HandlerChatActivity"
-            android:windowSoftInputMode="stateHidden"/>
+        android:name=".studyfragment.loadingways.handler.HandlerChatActivity"
+        android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".studyfragment.basedfunction.actionbar.ActionBar_SimpleUse_Activity"
-            android:uiOptions="splitActionBarWhenNarrow">
+        android:name=".studyfragment.basedfunction.actionbar.ActionBar_SimpleUse_Activity"
+        android:uiOptions="splitActionBarWhenNarrow">
             <meta-data
-                android:name="android.support.UI_OPTIONS"
-                android:value="splitActionBarWhenNarrow">
+            android:name="android.support.UI_OPTIONS"
+            android:value="splitActionBarWhenNarrow">
             </meta-data>
         </activity>
         <activity android:name=".studyfragment.basedfunction.actionbar.ActionBar_Spinner_Activity"/>
         <activity android:name=".studyfragment.basedfunction.actionbar.ActionBar_Search_Activity"/>
         <activity android:name=".studyfragment.basedfunction.ActionBarActivity"/>
         <activity
-            android:name=".studyfragment.basedfunction.actionbar.ToolBarActivity"
-            android:theme="@style/AppThemeNoActionBar">
+        android:name=".studyfragment.basedfunction.actionbar.ToolBarActivity"
+        android:theme="@style/AppThemeNoActionBar">
         </activity>
         <activity android:name=".studyfragment.components.BroadcastRecriverActivity"/>
         <activity android:name=".studyfragment.components.ServiceActivity"/>
@@ -218,11 +235,11 @@
         <activity android:name=".studyfragment.seniorcontrols.EventDestributionActivity"/>
         <activity android:name=".studyfragment.seniorcontrols.MapActivity"/>
         <activity
-            android:name=".studyfragment.seniorcontrols.map.GaodeMap"
-            android:theme="@style/AppThemeNoActionBar"/>
+        android:name=".studyfragment.seniorcontrols.map.GaodeMap"
+        android:theme="@style/AppThemeNoActionBar"/>
         <activity
-            android:name=".studyfragment.seniorcontrols.map.BaiduMap"
-            android:theme="@style/AppThemeNoActionBar"/>
+        android:name=".studyfragment.seniorcontrols.map.BaiduMap"
+        android:theme="@style/AppThemeNoActionBar"/>
         <activity android:name=".studyfragment.seniorcontrols.eventdistribution.EventTransActivity"/>
         <activity android:name=".studyfragment.seniorcontrols.eventdistribution.Scroll_ListView_Finish1"/>
         <activity android:name=".studyfragment.seniorcontrols.eventdistribution.Scroll_ListView_Finish2"/>
@@ -255,6 +272,11 @@
         <activity android:name=".studyfragment.seniorcontrols.crypto.AesCrypto"/>
         <activity android:name=".studyfragment.seniorcontrols.crypto.RsaCrypto"/>
         <activity android:name=".studyfragment.seniorcontrols.crypto.RsaCrypto_Ceshi"/>
+        <activity android:name=".welcomfragment.chat.ChatOnlineActivity"/>
+        <activity android:name=".welcomfragment.chat.ChatRegisterActivity"/>
+        <activity android:name=".welcomfragment.chat.ChatContactListActivity"/>
+        <activity android:name=".welcomfragment.chat.ChatPagerActivity"
+                  android:theme="@style/AppThemeNoActionBar"/>
 
         <!-- Service -->
         <!-- Service -->
@@ -414,6 +436,8 @@
         android:enabled="true"
         android:exported="true">
         </provider>
+
+
 
     </application>
 

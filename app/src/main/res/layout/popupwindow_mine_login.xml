@@ -39,12 +39,14 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
             <EditText
+                android:id="@+id/mine_login_phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="手机号"
                 android:paddingLeft="15dp"
                 android:background="@drawable/edittext_bg"/>
             <TextView
+                android:id="@+id/popup_send_message"
                 android:layout_width="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginRight="10dp"
@@ -56,6 +58,7 @@
         </FrameLayout>
 
         <EditText
+            android:id="@+id/mine_login_verification_code"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"

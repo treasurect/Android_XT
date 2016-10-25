@@ -6,6 +6,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
+import com.mob.commons.SMSSDK;
 import com.treasure_ct.android_xt.cartfragment.CartFragment;
 import com.treasure_ct.android_xt.minefragment.MineFragment;
 import com.treasure_ct.android_xt.relaxfragment.RelaxFragment;
@@ -21,6 +22,7 @@ public class MainActivity extends SlidingFragmentActivity implements RadioGroup.
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         radioGroup = (RadioGroup) findViewById(R.id.main_rG);
         rb01 = (RadioButton) findViewById(R.id.main_rB01);
         rb02 = (RadioButton) findViewById(R.id.main_rB02);

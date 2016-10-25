@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chat_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e7e1e1"
+    tools:context="com.treasure_ct.android_xt.welcomfragment.chat.ChatRegisterActivity">
+    <EditText
+        android:id="@+id/chat_userName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="注册用户名"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_bg"/>
+    <EditText
+        android:id="@+id/chat_userPass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="请输入密码"
+        android:inputType="numberPassword"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_bg"/>
+    <EditText
+        android:id="@+id/chat_userPassRe"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="请确认密码"
+        android:inputType="numberPassword"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_bg"/>
+    <Button
+        android:id="@+id/chat_register_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext2_bg"
+        android:onClick="btnRegisterSend"/>
+</LinearLayout>
