@@ -109,13 +109,15 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoadingActivity"
+            android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <!--  -->
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".studyfragment.basedcontrols.TextViewActivity"/>
         <activity android:name=".studyfragment.basedcontrols.ButtonActivity"/>
         <activity android:name=".studyfragment.basedcontrols.EditTextActivity"/>
@@ -440,8 +442,7 @@
             android:exported="true">
         </provider>
 
-        <activity android:name=".Loading">
-        </activity>
+
     </application>
 
 </manifest>
