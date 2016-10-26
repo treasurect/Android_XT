@@ -66,13 +66,14 @@
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
-    <!-- <uses-permission android:name="android.permission.BROADCAST_SMS"></uses-permission> -->
+     <!--<uses-permission android:name="android.permission.BROADCAST_SMS"></uses-permission> -->
     <!-- android:supportsRtl="true"  强制竖屏 -->
     <application
         android:name=".XTApplication"
         android:allowBackup="true"
         android:icon="@mipmap/icon_main4"
         android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
         <!-- 百度地图开发密钥 -->
@@ -197,25 +198,25 @@
         <activity android:name=".studyfragment.corecontrols.sliding.Sliding_Normal_Activity"/>
         <activity android:name=".studyfragment.corecontrols.sliding.SlidingMenu_Activity"/>
         <activity
-        android:name=".studyfragment.corecontrols.sliding.DrawerLayoutActivity"
-        android:theme="@style/AppThemeNoActionBar"/>
+            android:name=".studyfragment.corecontrols.sliding.DrawerLayoutActivity"
+            android:theme="@style/AppThemeNoActionBar"/>
         <activity
-        android:name=".studyfragment.loadingways.handler.HandlerChatActivity"
-        android:windowSoftInputMode="stateHidden"/>
+            android:name=".studyfragment.loadingways.handler.HandlerChatActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
-        android:name=".studyfragment.basedfunction.actionbar.ActionBar_SimpleUse_Activity"
-        android:uiOptions="splitActionBarWhenNarrow">
+            android:name=".studyfragment.basedfunction.actionbar.ActionBar_SimpleUse_Activity"
+            android:uiOptions="splitActionBarWhenNarrow">
             <meta-data
-            android:name="android.support.UI_OPTIONS"
-            android:value="splitActionBarWhenNarrow">
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow">
             </meta-data>
         </activity>
         <activity android:name=".studyfragment.basedfunction.actionbar.ActionBar_Spinner_Activity"/>
         <activity android:name=".studyfragment.basedfunction.actionbar.ActionBar_Search_Activity"/>
         <activity android:name=".studyfragment.basedfunction.ActionBarActivity"/>
         <activity
-        android:name=".studyfragment.basedfunction.actionbar.ToolBarActivity"
-        android:theme="@style/AppThemeNoActionBar">
+            android:name=".studyfragment.basedfunction.actionbar.ToolBarActivity"
+            android:theme="@style/AppThemeNoActionBar">
         </activity>
         <activity android:name=".studyfragment.components.BroadcastRecriverActivity"/>
         <activity android:name=".studyfragment.components.ServiceActivity"/>
@@ -235,11 +236,11 @@
         <activity android:name=".studyfragment.seniorcontrols.EventDestributionActivity"/>
         <activity android:name=".studyfragment.seniorcontrols.MapActivity"/>
         <activity
-        android:name=".studyfragment.seniorcontrols.map.GaodeMap"
-        android:theme="@style/AppThemeNoActionBar"/>
+            android:name=".studyfragment.seniorcontrols.map.GaodeMap"
+            android:theme="@style/AppThemeNoActionBar"/>
         <activity
-        android:name=".studyfragment.seniorcontrols.map.BaiduMap"
-        android:theme="@style/AppThemeNoActionBar"/>
+            android:name=".studyfragment.seniorcontrols.map.BaiduMap"
+            android:theme="@style/AppThemeNoActionBar"/>
         <activity android:name=".studyfragment.seniorcontrols.eventdistribution.EventTransActivity"/>
         <activity android:name=".studyfragment.seniorcontrols.eventdistribution.Scroll_ListView_Finish1"/>
         <activity android:name=".studyfragment.seniorcontrols.eventdistribution.Scroll_ListView_Finish2"/>
@@ -275,8 +276,10 @@
         <activity android:name=".welcomfragment.chat.ChatOnlineActivity"/>
         <activity android:name=".welcomfragment.chat.ChatRegisterActivity"/>
         <activity android:name=".welcomfragment.chat.ChatContactListActivity"/>
-        <activity android:name=".welcomfragment.chat.ChatPagerActivity"
-                  android:theme="@style/AppThemeNoActionBar"/>
+        <activity
+            android:name=".welcomfragment.chat.ChatPagerActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"/>
 
         <!-- Service -->
         <!-- Service -->
@@ -296,23 +299,23 @@
 
         <service android:name=".studyfragment.components.service.musicdemo.MusicService"/>
         <service
-        android:name=".studyfragment.components.service.downloadfile.DownloadService"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.service.downloadfile.DownloadService"
+            android:enabled="true"
+            android:exported="false">
         </service>
         <service
-        android:name=".studyfragment.components.service.downloadfile.DownloadfileIntentService"
-        android:exported="false">
+            android:name=".studyfragment.components.service.downloadfile.DownloadfileIntentService"
+            android:exported="false">
         </service>
         <service
-        android:name=".studyfragment.components.service.music_binddemo.MusicBindService"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.service.music_binddemo.MusicBindService"
+            android:enabled="true"
+            android:exported="false">
         </service>
         <service
-        android:name=".studyfragment.simpledemo.contact_backup.BackupService"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.simpledemo.contact_backup.BackupService"
+            android:enabled="true"
+            android:exported="true">
         </service>
 
         <!-- BroadcastReceiver -->
@@ -342,67 +345,67 @@
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.Normal0Receiver"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.broadcastreceiver.Normal0Receiver"
+            android:enabled="true"
+            android:exported="false">
             <intent-filter android:priority="3">
                 <action android:name="treasure012"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.Normal1Receiver"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.broadcastreceiver.Normal1Receiver"
+            android:enabled="true"
+            android:exported="false">
             <intent-filter android:priority="6">
                 <action android:name="treasure012"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.SmsReceiver"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.components.broadcastreceiver.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.Ordered0Recevide"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.broadcastreceiver.Ordered0Recevide"
+            android:enabled="true"
+            android:exported="false">
             <intent-filter>
                 <action android:name="treasure_ct123"/>
             </intent-filter>
         </receiver>
         <!-- permission 属性 -->
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.Ordered1Recevider"
-        android:enabled="true"
-        android:exported="false"
-        android:permission="treasure_ct5">
+            android:name=".studyfragment.components.broadcastreceiver.Ordered1Recevider"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="treasure_ct5">
             <intent-filter>
                 <action android:name="treasure_ct123"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.BootReciver"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.components.broadcastreceiver.BootReciver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.simpledemo.contact_backup.Backup_BootReceiver"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.simpledemo.contact_backup.Backup_BootReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.simpledemo.contact_backup.Backup_NetworkReceiver"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.simpledemo.contact_backup.Backup_NetworkReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
             </intent-filter>
@@ -425,20 +428,20 @@
         <!-- ContentProvider -->
 
         <provider
-        android:name=".studyfragment.components.contentprovider.MyContentProvider"
-        android:authorities="com.treasure_ct.android_xt.components.contentprovider.CustomContentProvider;treasure"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.components.contentprovider.MyContentProvider"
+            android:authorities="com.treasure_ct.android_xt.components.contentprovider.CustomContentProvider;treasure"
+            android:enabled="true"
+            android:exported="true">
         </provider>
         <provider
-        android:name=".studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
-        android:authorities="com.treasure_ct.android_xt.studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
+            android:authorities="com.treasure_ct.android_xt.studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
+            android:enabled="true"
+            android:exported="true">
         </provider>
 
-
-
+        <activity android:name=".Loading">
+        </activity>
     </application>
 
 </manifest>
