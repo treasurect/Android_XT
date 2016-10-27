@@ -7,6 +7,8 @@ import com.hyphenate.chat.EMOptions;
 import org.xutils.*;
 import org.xutils.BuildConfig;
 
+import cn.smssdk.SMSSDK;
+
 /**
  * Created by treasure on 2016.10.21.
  */
@@ -24,6 +26,6 @@ public class XTApplication extends Application{
         if (BuildConfig.DEBUG){
             emClient.setDebugMode(true);
         }
-
+        SMSSDK.initSDK(this,"1847114ba1735","786941ca8790a16335b0ba1b824b8d64");
     }
 }

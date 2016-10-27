@@ -27,7 +27,7 @@ public class StudyFragment extends Fragment implements AdapterView.OnItemClickLi
         View view = inflater.inflate(R.layout.fragment_study, container, false);
          listView = (ListView) view.findViewById(R.id.study_listView);
         List<String> list = Arrays.asList("导读","基础控件","简单控件","核心控件","高级控件",
-                                        "四大组件","基础功能","加载方式","存储方面","简单应用");
+                                        "四大组件","基础功能","加载方式","存储方面","简单应用","进阶之路");
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),
                                                             android.R.layout.simple_list_item_1,
                                                             list);
@@ -72,6 +72,9 @@ public class StudyFragment extends Fragment implements AdapterView.OnItemClickLi
                 break;
             case 9:
                 transaction.replace(R.id.study_frame,new SimpleDemoFragment());
+                break;
+            case 10:
+                transaction.replace(R.id.study_frame,new StudyAdvanceFragment());
                 break;
         }
         transaction.commit();

@@ -67,8 +67,16 @@
             android:paddingLeft="20dp"
             android:hint="请输入验证码"
             android:background="@drawable/edittext_bg"/>
-
+        <TextView
+            android:id="@+id/mine_popup_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="未注册的，快来注册呀"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="#fff"/>
         <Button
+            android:id="@+id/mine_popup_in"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"

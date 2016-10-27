@@ -33,8 +33,8 @@ android {
     productFlavors {
     }
 }
-repositories{
-    flatDir{
+repositories {
+    flatDir {
         dirs 'libs' //就是你放aar的目录地址
     }
 }
@@ -56,6 +56,8 @@ dependencies {
     compile project(':qq_support_xt')
     compile project(':sharesdk_sms_xt')
     compile project(':im_huanxin_xt')
+    compile name: 'SMSSDK-2.1.2', ext: 'aar'
+    compile name: 'SMSSDKGUI-2.1.2', ext: 'aar'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:gridlayout-v7:24.2.1'
     compile 'com.github.stuxuhai:jpinyin:1.1.7'
@@ -63,9 +65,17 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:percent:24.2.1'
     compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'org.xutils:xutils:3.3.36'
     compile 'org.greenrobot:eventbus:3.0.0'
     testCompile 'junit:junit:4.12'
-    compile name: 'SMSSDK-2.1.2', ext: 'aar'
-    compile name: 'SMSSDKGUI-2.1.2', ext: 'aar'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxjava:1.2.1'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7-kotlin:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-support-v4:0.4.0'
 }
