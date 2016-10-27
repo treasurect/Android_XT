@@ -20,6 +20,7 @@ import com.treasure_ct.android_xt.studyfragment.simplecontrols.ScrollViewActivit
 import com.treasure_ct.android_xt.studyfragment.simplecontrols.SpinnerActivity;
 import com.treasure_ct.android_xt.studyfragment.studyadvance.retrofit.RetrofitActivity;
 import com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava.RXJavaActivity;
+import com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava.RXJavaSimpleUseActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,8 +31,8 @@ public class StudyAdvanceFragment extends Fragment implements AdapterView.OnItem
     private GridView gridView;
     private SimpleAdapter adapter;
     private List<Map<String,Object>> dataList;
-    private int[] icon = {R.mipmap.icon_main1, R.mipmap.icon_main2, R.mipmap.icon_main5, R.mipmap.icon_main4};
-    private String[] iconName ={"Retrofit","RxJava","Spinner","AutoComplete","ScrollView","Dialog"} ;
+    private int[] icon = {R.mipmap.icon_main1, R.mipmap.icon_main2};
+    private String[] iconName ={"Retrofit","RxJava"} ;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

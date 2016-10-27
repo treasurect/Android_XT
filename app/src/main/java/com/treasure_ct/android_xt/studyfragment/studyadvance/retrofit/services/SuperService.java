@@ -10,6 +10,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Part;
 import retrofit2.http.Path;
 
@@ -34,6 +35,7 @@ public interface SuperService {
     /**
      * PUT请求 传递一个数据实体类 使用JSON传递
      */
+    @PUT("info")
     Call<String>updateInfo(@Body InfoModel info);
 
     @POST("file")

@@ -280,10 +280,10 @@
         <activity android:name=".welcomfragment.chat.ChatRegisterActivity"/>
         <activity android:name=".welcomfragment.chat.ChatContactListActivity"/>
         <activity
-        android:name=".welcomfragment.chat.ChatPagerActivity"
-        android:theme="@style/AppThemeNoActionBar"
-        android:windowSoftInputMode="stateHidden|stateAlwaysHidden"/>
-        <activity android:name=".studyfragment.studyadvance.rxjava.RXJavaActivity"/>
+            android:name=".welcomfragment.chat.ChatPagerActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"/>
+        <activity android:name=".studyfragment.studyadvance.rxjava.RXJavaSimpleUseActivity"/>
         <activity android:name=".studyfragment.studyadvance.retrofit.RetrofitActivity"/>
         <activity android:name=".studyfragment.studyadvance.rxjava.DoubanActivity"/>
 
@@ -305,23 +305,23 @@
 
         <service android:name=".studyfragment.components.service.musicdemo.MusicService"/>
         <service
-        android:name=".studyfragment.components.service.downloadfile.DownloadService"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.service.downloadfile.DownloadService"
+            android:enabled="true"
+            android:exported="false">
         </service>
         <service
-        android:name=".studyfragment.components.service.downloadfile.DownloadfileIntentService"
-        android:exported="false">
+            android:name=".studyfragment.components.service.downloadfile.DownloadfileIntentService"
+            android:exported="false">
         </service>
         <service
-        android:name=".studyfragment.components.service.music_binddemo.MusicBindService"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.service.music_binddemo.MusicBindService"
+            android:enabled="true"
+            android:exported="false">
         </service>
         <service
-        android:name=".studyfragment.simpledemo.contact_backup.BackupService"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.simpledemo.contact_backup.BackupService"
+            android:enabled="true"
+            android:exported="true">
         </service>
 
         <!-- BroadcastReceiver -->
@@ -351,67 +351,67 @@
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.Normal0Receiver"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.broadcastreceiver.Normal0Receiver"
+            android:enabled="true"
+            android:exported="false">
             <intent-filter android:priority="3">
                 <action android:name="treasure012"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.Normal1Receiver"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.broadcastreceiver.Normal1Receiver"
+            android:enabled="true"
+            android:exported="false">
             <intent-filter android:priority="6">
                 <action android:name="treasure012"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.SmsReceiver"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.components.broadcastreceiver.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.Ordered0Recevide"
-        android:enabled="true"
-        android:exported="false">
+            android:name=".studyfragment.components.broadcastreceiver.Ordered0Recevide"
+            android:enabled="true"
+            android:exported="false">
             <intent-filter>
                 <action android:name="treasure_ct123"/>
             </intent-filter>
         </receiver>
         <!-- permission 属性 -->
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.Ordered1Recevider"
-        android:enabled="true"
-        android:exported="false"
-        android:permission="treasure_ct5">
+            android:name=".studyfragment.components.broadcastreceiver.Ordered1Recevider"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="treasure_ct5">
             <intent-filter>
                 <action android:name="treasure_ct123"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.components.broadcastreceiver.BootReciver"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.components.broadcastreceiver.BootReciver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.simpledemo.contact_backup.Backup_BootReceiver"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.simpledemo.contact_backup.Backup_BootReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
         <receiver
-        android:name=".studyfragment.simpledemo.contact_backup.Backup_NetworkReceiver"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.simpledemo.contact_backup.Backup_NetworkReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
             </intent-filter>
@@ -434,18 +434,20 @@
         <!-- ContentProvider -->
 
         <provider
-        android:name=".studyfragment.components.contentprovider.MyContentProvider"
-        android:authorities="com.treasure_ct.android_xt.components.contentprovider.CustomContentProvider;treasure"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.components.contentprovider.MyContentProvider"
+            android:authorities="com.treasure_ct.android_xt.components.contentprovider.CustomContentProvider;treasure"
+            android:enabled="true"
+            android:exported="true">
         </provider>
         <provider
-        android:name=".studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
-        android:authorities="com.treasure_ct.android_xt.studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
-        android:enabled="true"
-        android:exported="true">
+            android:name=".studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
+            android:authorities="com.treasure_ct.android_xt.studyfragment.simpledemo.keymanager_xt.provider.MyContentProvider"
+            android:enabled="true"
+            android:exported="true">
         </provider>
 
+        <activity android:name=".studyfragment.studyadvance.rxjava.RXJavaActivity"/>
+        <activity android:name=".studyfragment.studyadvance.rxjava.LongTimeActivity"/>
     </application>
 
 </manifest>

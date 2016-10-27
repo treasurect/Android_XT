@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import rx.Observable;
 import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
 
 /**
  * 使用RxJava模式，创建各种针对TextView/EditText的Observable
@@ -52,7 +53,7 @@ public class RXTextView {
      */
     public static Observable<String> textChange(TextView editText){
         Observable<String> ret = Observable.create(new TextChangeOnSubScribe(editText));
-
+        ret.observeOn(AndroidSchedulers.mainThread());
         return ret;
     }
 }

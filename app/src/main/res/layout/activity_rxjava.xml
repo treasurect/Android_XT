@@ -6,34 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context="com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava.RXJavaActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="RxJava的使用"
+        android:textColor="#fa0165"
+        android:textSize="30sp"
+        android:gravity="center"/>
     <Button
+        android:id="@+id/rxJava_simpleUse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="简单练习"
-        android:onClick="btnFirstTest"/>
+        android:text="简单使用"/>
     <Button
+        android:id="@+id/rxJava_LongTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="获取程序包名"
-        android:onClick="btnSecondTest"/>
+        android:text="耗时操作"/>
     <Button
+        android:id="@+id/rxJavaDouban"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3"
-        android:onClick="btnSubject"/>
-    <EditText
-        android:id="@+id/rx_editText"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/edittext_bg"/>
-    <EditText
-        android:id="@+id/rx_editText2"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/edittext_bg"/>
-    <ListView
-        android:id="@+id/app_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:text="豆瓣"/>
 </LinearLayout>
