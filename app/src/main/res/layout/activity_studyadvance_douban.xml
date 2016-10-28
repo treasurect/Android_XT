@@ -6,9 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava.DoubanActivity">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="btnGetList"/>
+        android:text="获取豆瓣API"
+        android:layout_margin="20dp"
+        android:onClick="btnGetAPI"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取电影详情"
+        android:layout_margin="20dp"
+        android:onClick="btnGetMovieDetail"/>
 </LinearLayout>

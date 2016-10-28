@@ -2,11 +2,9 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        android_xt_key {
-            keyAlias 'AndroidList'
-            keyPassword 'treasure'
-            storeFile file('../android_xt.jks')
-            storePassword 'treasure'
+        Android {
+            keyAlias 'Android'
+            storeFile file('../androidxt.jks')
         }
     }
     compileSdkVersion 24
@@ -18,16 +16,14 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.android_xt_key
+        signingConfig signingConfigs.Android
     }
     buildTypes {
         release {
+            //开启代码混淆
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.android_xt_key
-        }
-        debug {
-            signingConfig signingConfigs.android_xt_key
+            signingConfig signingConfigs.Android
         }
     }
     productFlavors {

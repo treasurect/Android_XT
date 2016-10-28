@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_studyadvance_memory_second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.treasure_ct.android_xt.studyfragment.studyadvance.memoryoptimization.MemorySecondActivity">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回跳"
+        android:layout_margin="10dp"
+        android:onClick="btnJumppre"/>
+    <TextView
+        android:id="@+id/getMemory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用内存"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SparseArrayTest"
+        android:onClick="btnSparseArray"/>
+</LinearLayout>

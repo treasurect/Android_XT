@@ -76,7 +76,7 @@
             android:layout_margin="5dp"
             android:textColor="#fff"/>
         <Button
-            android:id="@+id/mine_popup_in"
+            android:id="@+id/mine_popup_loginin"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"

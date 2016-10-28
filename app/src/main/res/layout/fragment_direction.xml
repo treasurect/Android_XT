@@ -38,6 +38,6 @@
         android:textColor="#f50370"
         android:textStyle="italic"
         android:layout_marginLeft="20dp"
-        android:text="有\n事\n者\n，\n事\n竟\n成\n"/>
+        android:text="有\n志\n者\n，\n事\n竟\n成\n"/>
 
 </LinearLayout>

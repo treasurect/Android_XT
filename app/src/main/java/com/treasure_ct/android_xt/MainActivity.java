@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.mob.commons.SMSSDK;
@@ -18,6 +20,7 @@ import com.treasure_ct.android_xt.welcomfragment.WelcomeFragment;
 public class MainActivity extends SlidingFragmentActivity implements RadioGroup.OnCheckedChangeListener {
     private RadioGroup radioGroup;
     private RadioButton rb01,rb02,rb03,rb04,rb05;
+    private int bottom_id = -1;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,28 +81,49 @@ public class MainActivity extends SlidingFragmentActivity implements RadioGroup.
                 transaction.replace(R.id.main_frame,new WelcomeFragment());
                 initRBtextColor();
                 rb01.setTextColor(R.color.mylove);
+                bottom_id = 0;
                 break;
             case R.id.main_rB02:
                 transaction.replace(R.id.main_frame,new RelaxFragment());
                 initRBtextColor();
                 rb02.setTextColor(R.color.mylove);
+                bottom_id = 1;
                 break;
             case R.id.main_rB03:
                 transaction.replace(R.id.main_frame,new StudyFragment());
                 initRBtextColor();
                 rb03.setTextColor(R.color.mylove);
+                bottom_id =2;
                 break;
             case R.id.main_rB04:
                 transaction.replace(R.id.main_frame,new CartFragment());
                 initRBtextColor();
                 rb04.setTextColor(R.color.mylove);
+                bottom_id = 3;
                 break;
             case R.id.main_rB05:
                 transaction.replace(R.id.main_frame,new MineFragment());
                 initRBtextColor();
                 rb05.setTextColor(R.color.mylove);
+                bottom_id = 4;
                 break;
         }
         transaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (bottom_id != -1){
+            if (bottom_id != 2){
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_frame,new StudyFragment()).commit();
+                initRBtextColor();
+                rb03.setTextColor(R.color.mylove);
+                bottom_id =2;
+                rb03.setChecked(true);
+            }else {
+                super.onBackPressed();
+            }
+        }
     }
 }

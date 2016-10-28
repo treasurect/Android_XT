@@ -1,4 +1,4 @@
-package com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava;
+package com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava.services;
 
 /**
  * Created by treasure on 2016.10.27.

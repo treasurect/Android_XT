@@ -3,8 +3,6 @@ package com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava;
 import android.content.pm.ApplicationInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.treasure_ct.android_xt.R;
+import com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava.services.RXTextView;
 
 import java.util.ArrayList;
 import java.util.List;

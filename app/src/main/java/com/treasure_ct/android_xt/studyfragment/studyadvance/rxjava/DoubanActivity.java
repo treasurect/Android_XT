@@ -33,7 +33,7 @@ public class DoubanActivity extends AppCompatActivity {
         mDoubanService = retrofit.create(DoubanService.class);
     }
 
-    public void btnGetList(View view) {
+    public void btnGetAPI(View view) {
         Observable<String> observable = mDoubanService.getMovieTop250(0, 10);
         observable
                 .observeOn(AndroidSchedulers.mainThread())
@@ -59,5 +59,9 @@ public class DoubanActivity extends AppCompatActivity {
                         Log.d(TAG, "list =  " + s);
                     }
                 });
+    }
+
+    public void btnGetMovieDetail(View view) {
+
     }
 }

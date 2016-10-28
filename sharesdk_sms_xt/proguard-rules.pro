@@ -15,3 +15,6 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keep class cn.smssdk.**{*;}
+-keep class **.R$* {*;}
+-keep class **.R{*;}

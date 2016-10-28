@@ -18,6 +18,7 @@ import com.treasure_ct.android_xt.studyfragment.simplecontrols.CheckBoxActivity;
 import com.treasure_ct.android_xt.studyfragment.simplecontrols.RadioButtonActivity;
 import com.treasure_ct.android_xt.studyfragment.simplecontrols.ScrollViewActivity;
 import com.treasure_ct.android_xt.studyfragment.simplecontrols.SpinnerActivity;
+import com.treasure_ct.android_xt.studyfragment.studyadvance.memoryoptimization.MemoryOptimizationActivity;
 import com.treasure_ct.android_xt.studyfragment.studyadvance.retrofit.RetrofitActivity;
 import com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava.RXJavaActivity;
 import com.treasure_ct.android_xt.studyfragment.studyadvance.rxjava.RXJavaSimpleUseActivity;
@@ -31,8 +32,8 @@ public class StudyAdvanceFragment extends Fragment implements AdapterView.OnItem
     private GridView gridView;
     private SimpleAdapter adapter;
     private List<Map<String,Object>> dataList;
-    private int[] icon = {R.mipmap.icon_main1, R.mipmap.icon_main2};
-    private String[] iconName ={"Retrofit","RxJava"} ;
+    private int[] icon = {R.mipmap.icon_main1, R.mipmap.icon_main2,R.mipmap.icon_main13};
+    private String[] iconName ={"Retrofit","RxJava","内存优化"} ;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -62,6 +63,9 @@ public class StudyAdvanceFragment extends Fragment implements AdapterView.OnItem
                 break;
             case "RxJava":
                 startActivity(new Intent().setClass(getContext(),RXJavaActivity.class));
+                break;
+            case "内存优化":
+                startActivity(new Intent().setClass(getContext(),MemoryOptimizationActivity.class));
                 break;
         }
     }

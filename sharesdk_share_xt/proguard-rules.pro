@@ -15,3 +15,5 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-dontwarn cn.sharesdk.**
+-keep class cn.sharesdk.** { *; }

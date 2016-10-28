@@ -448,6 +448,10 @@
 
         <activity android:name=".studyfragment.studyadvance.rxjava.RXJavaActivity"/>
         <activity android:name=".studyfragment.studyadvance.rxjava.LongTimeActivity"/>
+        <activity android:name=".studyfragment.studyadvance.memoryoptimization.MemoryOptimizationActivity">
+        </activity>
+        <activity android:name=".studyfragment.studyadvance.memoryoptimization.MemorySecondActivity">
+        </activity>
     </application>
 
 </manifest>

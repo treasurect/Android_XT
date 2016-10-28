@@ -14,4 +14,6 @@ import rx.Observable;
 public interface DoubanService {
     @GET("movie/top250")
     Observable<String> getMovieTop250(@Query("start") int start, @Query("count") int count);
+    @GET("/v2/movie/subject/id")
+    Observable<String> getMovieDetail(@Query("id") int id);
 }
