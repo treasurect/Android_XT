@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.treasure_ct.android_xt.R;
-import com.treasure_ct.android_xt.studyfragment.MainDialogFragment;
 
 
 /**
@@ -21,8 +20,10 @@ public class SlidingMainLeftFragment extends Fragment implements View.OnClickLis
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main_sliding_left, container, false);
-       ImageView imageView = (ImageView) view.findViewById(R.id.left_weather_img);
-       imageView.setOnClickListener(this);
+       ImageView weather = (ImageView) view.findViewById(R.id.left_weather_img);
+       ImageView video_recording = (ImageView) view.findViewById(R.id.left_video_recording_img);
+       weather.setOnClickListener(this);
+       video_recording.setOnClickListener(this);
        return view;
     }
 
@@ -32,6 +33,9 @@ public class SlidingMainLeftFragment extends Fragment implements View.OnClickLis
             case R.id.left_weather_img:
                 MainDialogFragment dialogFragment = new MainDialogFragment();
                 dialogFragment.show(getChildFragmentManager(),"WeatherDialog");
+                break;
+            case R.id.left_video_recording_img:
+
                 break;
         }
     }

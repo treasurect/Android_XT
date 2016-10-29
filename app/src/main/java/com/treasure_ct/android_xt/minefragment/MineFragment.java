@@ -1,17 +1,15 @@
 package com.treasure_ct.android_xt.minefragment;
 
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,45 +23,53 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.tencent.connect.UserInfo;
+import com.tencent.connect.auth.QQAuth;
+import com.tencent.tauth.IUiListener;
+import com.tencent.tauth.Tencent;
+import com.tencent.tauth.UiError;
 import com.treasure_ct.android_xt.R;
 
-import java.util.HashMap;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.util.HashMap;
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 import cn.smssdk.gui.RegisterPage;
 
 public class MineFragment extends Fragment implements View.OnClickListener {
+
+    private static final String TAG = "MineFragment";
     private PopupWindow mPopupWindow;
     private static boolean isNight = false;
     private ImageView imageNight;
     private EditText editCode, editPhone;
-    private String phoneNumber, user_name1, user_phone,country;
+    private String phoneNumber, user_name1, user_phone;
     private SharedPreferences loginInfo;
     private ImageView mine_login_icon;
     private TextView mine_login_username;
     private static boolean isLogin = false;
-//    private Handler handler = new Handler(){
-//        @Override
-//        public void handleMessage(Message msg) {
-//            switch (msg.what) {
-//                case 200:
-//                    Toast.makeText(getContext(), "登录成功", Toast.LENGTH_SHORT).show();
-//                    break;
-//                case 404:
-//                    Toast.makeText(getContext(), "登录失败", Toast.LENGTH_SHORT).show();
-//                    break;
-//            }
-//        }
-//    };
 
+    private Tencent tencent;
+    public QQAuth mQQAuth;
+    private ImageView qqLogin;
+    private UserInfo mInfo;
+    private String APP_ID = "1105699479";
+
+    private TextView register;
+    private ImageView weChatLogin;
+    private ImageView sinaLogin;
+    private ImageView qqweiboLogin;
+
+    /**
+     *                                                      onCreateView
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_mine, container, false);
-//        SMSSDK.registerEventHandler(eh);//注册短信回调监听
         imageNight = (ImageView) view.findViewById(R.id.mine_night_icon);
         mine_login_icon = (ImageView) view.findViewById(R.id.mine_login_icon);
         mine_login_username = (TextView) view.findViewById(R.id.mine_login_username);
@@ -83,24 +89,53 @@ public class MineFragment extends Fragment implements View.OnClickListener {
             mine_login_icon.setImageResource(R.mipmap.icon_login1);
             mine_login_username.setText("登录让内容更精彩");
         }
+        initQQLogin();
         return view;
     }
-
-//    /**
-//     * 解决横竖屏切换
-//     */
-//    @Override
-//    public void onSaveInstanceState(Bundle outState) {
-//        super.onSaveInstanceState(outState);
-//        outState.putBoolean("isLogin", isLogin);
-//    }
-//
-//    @Override
-//    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-//        super.onViewStateRestored(savedInstanceState);
-//        isLogin = savedInstanceState.getBoolean("isLogin",false);
-//    }
-
+    /**
+     *                                                      onClick点击事件
+     * @param v
+     */
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.mine_night_icon:
+                nightSwitch();
+                break;
+            case R.id.mine_login_icon:
+                if (!isLogin) {
+                    showPopupWindow();
+                } else {
+                    quitAccount();
+                }
+                break;
+            case R.id.mine_popup_quit:
+                quitpopupWindow();
+                break;
+            case R.id.popup_send_message:
+                sendMessageCode();
+                break;
+            case R.id.mine_popup_loginin:
+                loginAccount();
+                break;
+            case R.id.mine_popup_register:
+                registerAccount();
+                break;
+            case R.id.image_qqlogin:
+                qqLoginAccount();
+                break;
+            case R.id.image_wechatlogin:
+                break;
+            case R.id.image_sinalogin:
+                sinaLoginAccount();
+                break;
+            case R.id.image_qqweibologin:
+                break;
+        }
+    }
+    /**
+     *                                                      显示 关闭 popupWindow
+     */
     public void showPopupWindow() {
         View convertView = LayoutInflater.from(getContext()).inflate(R.layout.popupwindow_mine_login, null);
         mPopupWindow = new PopupWindow(convertView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, true);
@@ -112,17 +147,45 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         editPhone = (EditText) convertView.findViewById(R.id.mine_login_phone);
         editCode = (EditText) convertView.findViewById(R.id.mine_login_verification_code);
         Button login = (Button) convertView.findViewById(R.id.mine_popup_loginin);
-        TextView register = (TextView) convertView.findViewById(R.id.mine_popup_register);
+        register = (TextView) convertView.findViewById(R.id.mine_popup_register);
+        qqLogin = ((ImageView) convertView.findViewById(R.id.image_qqlogin));
+        weChatLogin = ((ImageView) convertView.findViewById(R.id.image_wechatlogin));
+        sinaLogin = ((ImageView) convertView.findViewById(R.id.image_sinalogin));
+        qqweiboLogin = ((ImageView) convertView.findViewById(R.id.image_qqweibologin));
 
         send_message.setOnClickListener(this);
         quit.setOnClickListener(this);
         login.setOnClickListener(this);
         register.setOnClickListener(this);
+        qqLogin.setOnClickListener(this);
+        weChatLogin.setOnClickListener(this);
+        sinaLogin.setOnClickListener(this);
+        qqweiboLogin.setOnClickListener(this);
 
         View rootView = LayoutInflater.from(getContext()).inflate(R.layout.fragment_mine, null);
         mPopupWindow.showAtLocation(rootView, Gravity.BOTTOM, 0, 0);
     }
+    private void quitpopupWindow() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("您确认放弃登录吗？");
+        builder.setPositiveButton("放弃", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                mPopupWindow.dismiss();
+            }
+        });
+        builder.setNegativeButton("继续登录", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
 
+            }
+        });
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+    /**
+     *                                                      短信方式 登录注册注销  验证码点击
+     */
     public void loginAccount() {
         //                String code = editCode.getText().toString().trim();
 //                if (TextUtils.isEmpty(code)){
@@ -147,7 +210,6 @@ public class MineFragment extends Fragment implements View.OnClickListener {
             Toast.makeText(getContext(), "用户名或密码错误", Toast.LENGTH_SHORT).show();
         }
     }
-
     private void registerAccount() {
         //打开注册页面
         RegisterPage registerPage = new RegisterPage();
@@ -157,7 +219,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
                 if (result == SMSSDK.RESULT_COMPLETE) {
                     @SuppressWarnings("unchecked")
                     HashMap<String, Object> phoneMap = (HashMap<String, Object>) data;
-                    country = (String) phoneMap.get("country");
+//                    country = (String) phoneMap.get("country");
                     phoneNumber = (String) phoneMap.get("phone");
                     final String code2 = (String) phoneMap.get("code");
                     AlertDialog.Builder builder1 = new AlertDialog.Builder(getContext());
@@ -213,7 +275,6 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         });
         registerPage.show(getContext());
     }
-
     private void quitAccount() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("Are you sure?");
@@ -235,7 +296,20 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         });
         builder.create().show();
     }
-
+    private void sendMessageCode() {
+        //发送短信，获取验证码
+        //                phoneNumber = editPhone.getText().toString().trim();
+//                if (TextUtils.isEmpty(phoneNumber)){
+//                    Toast.makeText(getContext(), "号码不能为空！！！", Toast.LENGTH_SHORT).show();
+//                }else {
+//                    SMSSDK.getVerificationCode("+86",phoneNumber);
+//                    Toast.makeText(getContext(), "发送成功", Toast.LENGTH_SHORT).show();
+//                }
+        Toast.makeText(getContext(), "请直接注册或者直接登录哦", Toast.LENGTH_SHORT).show();
+    }
+    /**
+     *                                                      夜间模式的切换
+     */
     private void nightSwitch() {
         if (!isNight) {
             imageNight.setImageResource(R.mipmap.icon_night);
@@ -254,99 +328,118 @@ public class MineFragment extends Fragment implements View.OnClickListener {
             window.setAttributes(layoutParams);
         }
     }
-
-    private void quitpopupWindow() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("您确认放弃登录吗？");
-        builder.setPositiveButton("放弃", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                mPopupWindow.dismiss();
-            }
-        });
-        builder.setNegativeButton("继续登录", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        final AlertDialog dialog = builder.create();
-        dialog.show();
+    /**
+     *                                                      QQ第三方登录 注销
+     */
+    private void initQQLogin() {
+        // Tencent类是SDK的主要实现类，通过此访问腾讯开放的OpenAPI。
+        mQQAuth = QQAuth.createInstance(APP_ID, getContext().getApplicationContext());
+        //实例化
+        tencent = Tencent.createInstance(APP_ID, getContext());
     }
-
-    private void sendMessageCode() {
-        //发送短信，获取验证码
-        //                phoneNumber = editPhone.getText().toString().trim();
-//                if (TextUtils.isEmpty(phoneNumber)){
-//                    Toast.makeText(getContext(), "号码不能为空！！！", Toast.LENGTH_SHORT).show();
-//                }else {
-//                    SMSSDK.getVerificationCode("+86",phoneNumber);
-//                    Toast.makeText(getContext(), "发送成功", Toast.LENGTH_SHORT).show();
-//                }
-        Toast.makeText(getContext(), "请直接注册或者直接登录哦", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.mine_night_icon:
-                nightSwitch();
-                break;
-            case R.id.mine_login_icon:
-                if (!isLogin) {
-                    showPopupWindow();
-                } else {
-                    quitAccount();
+    private void qqLoginAccount() {
+        if (!mQQAuth.isSessionValid()){
+            IUiListener listener = new BaseUIListener(){
+                @Override
+                public void onComplete(Object o) {
+                    updateLoginUser();
+                    Toast.makeText(getContext(), "测试1", Toast.LENGTH_SHORT).show();
                 }
-                break;
-            case R.id.mine_popup_quit:
-                quitpopupWindow();
-                break;
-            case R.id.popup_send_message:
-                sendMessageCode();
-                break;
-            case R.id.mine_popup_loginin:
-                loginAccount();
-                break;
-            case R.id.mine_popup_register:
-                registerAccount();
-                break;
+            };
+            Toast.makeText(getContext(), "测试2", Toast.LENGTH_SHORT).show();
+//            mQQAuth.login(getActivity(),"all",listener);
+            tencent.login(getActivity(),"all",listener);
+            mPopupWindow.dismiss();
+        }else {
+            mQQAuth.logout(getContext());
+            updateLoginUser();
+        }
+    }
+    private void updateLoginUser(){
+        if (mQQAuth != null && mQQAuth.isSessionValid()){
+            IUiListener listener = new IUiListener(){
+                @Override
+                public void onComplete(final Object response) {
+                    Toast.makeText(getContext(), "更新成功", Toast.LENGTH_SHORT).show();
+                    Message msg = new Message();
+                    msg.obj = response;
+                    msg.what = 0;
+                    mHandler.sendMessage(msg);
+                    new Thread() {
+
+                        @Override
+                        public void run() {
+                            JSONObject json = (JSONObject) response;
+                            if (json.has("figureurl")) {
+                                Bitmap bitmap = null;
+
+                                Message msg = new Message();
+                                msg.obj = bitmap;
+                                msg.what = 1;
+                                mHandler.sendMessage(msg);
+                            }
+                        }
+
+                    }.start();
+                }
+                @Override
+                public void onError(UiError uiError) {
+                    Toast.makeText(getContext(), "更新失败", Toast.LENGTH_SHORT).show();
+                }
+                @Override
+                public void onCancel() {
+                    Toast.makeText(getContext(), "更新取消 ", Toast.LENGTH_SHORT).show();
+                }
+            };
+            mInfo = new UserInfo(getContext(),mQQAuth.getQQToken());
+            mInfo.getUserInfo(listener);
+        }else {
+            mine_login_username.setText("");
+        }
+    }
+    Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 0:
+                    JSONObject object = (JSONObject) msg.obj;
+                    if (object.has("nickname")){
+                        try {
+                            mine_login_username.setText(object.getString("nickname"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    break;
+                case 1:
+                    break;
+            }
+        }
+    };
+    private class BaseUIListener implements IUiListener{
+        @Override
+        public void onComplete(Object o) {
+            Toast.makeText(getContext(), "登录成功", Toast.LENGTH_SHORT).show();
+        }
+        @Override
+        public void onError(UiError uiError) {
+            Toast.makeText(getContext(), "登录失败", Toast.LENGTH_SHORT).show();
+        }
+        @Override
+        public void onCancel() {
+            Toast.makeText(getContext(), "登录取消", Toast.LENGTH_SHORT).show();
         }
     }
 
-//    private EventHandler eh= new EventHandler(){
-//        @Override
-//        public void afterEvent(int event, int result, Object data) {
-//
-//            if (result == SMSSDK.RESULT_COMPLETE) {
-//                //回调完成
-//                if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {
-//                    //提交验证码成功,如果验证成功会在data里返回数据。data数据类型为HashMap<number,code>
-//                    HashMap<String, Object> data1 = (HashMap<String, Object>) data;
-//                    String country = (String) data1.get("country");
-//                    String phone = (String) data1.get("phone");
-//                    Toast.makeText(getContext(), "城市："+country+"\n手机号："+phone, Toast.LENGTH_SHORT).show();
-//                    if (phone.equals(phoneNumber)){
-//                        Message message = handler.obtainMessage(200);
-//                        handler.sendMessage(message);
-//                    }else {
-//                        Message message = handler.obtainMessage(404);
-//                        handler.sendMessage(message);
-//                    }
-//                }else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE){
-//                    //获取验证码成功
-//                }else if (event ==SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES){
-//                    //返回支持发送验证码的国家列表
-//                }
-//            }else{
-//                ((Throwable)data).printStackTrace();
-//            }
-//        }
-//    };
+    /**
+     *                                                             微博第三方登录  注销
+     */
+    private void sinaLoginAccount() {
 
-//    @Override
-//    public void onDestroyView() {
-//        SMSSDK.unregisterAllEventHandler();//取消监听，防止内存泄露
-//        super.onDestroyView();
-//    }
+    }
+    @Override
+    public void onStop() {
+        mPopupWindow.dismiss();
+        super.onStop();
+    }
 }

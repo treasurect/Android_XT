@@ -111,20 +111,23 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:src="@mipmap/icon_qq2"
-                    android:id="@+id/imageView2"/>
+                    android:id="@+id/image_qqlogin"/>
 
                 <ImageView
+                    android:id="@+id/image_wechatlogin"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:src="@mipmap/icon_weixin"/>
                 <ImageView
+                    android:id="@+id/image_sinalogin"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:src="@mipmap/icon_sina"/>
                 <ImageView
+                    android:id="@+id/image_qqweibologin"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"

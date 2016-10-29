@@ -16,7 +16,8 @@
             <option value="$PROJECT_DIR$/network_xt" />
             <option value="$PROJECT_DIR$/post_network_xt" />
             <option value="$PROJECT_DIR$/qq_support_xt" />
-            <option value="$PROJECT_DIR$/sharesdk_share_xt" />
+            <option value="$PROJECT_DIR$/share_common_xt" />
+            <option value="$PROJECT_DIR$/sharerec_xt" />
             <option value="$PROJECT_DIR$/sharesdk_sms_xt" />
             <option value="$PROJECT_DIR$/sharesdk_weather_xt" />
             <option value="$PROJECT_DIR$/slidingmenu_xt" />

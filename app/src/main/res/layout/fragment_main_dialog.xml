@@ -3,7 +3,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            tools:context="com.treasure_ct.android_xt.studyfragment.MainDialogFragment">
+            tools:context="com.treasure_ct.android_xt.slidingfragment.MainDialogFragment">
     <LinearLayout
         android:id="@+id/main_weather_layout"
         android:layout_width="300dp"

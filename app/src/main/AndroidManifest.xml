@@ -74,7 +74,8 @@
         android:icon="@mipmap/icon_main4"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
 
         <!-- 百度地图开发密钥 -->
         <!-- 百度开发密钥 -->
@@ -451,6 +452,8 @@
         <activity android:name=".studyfragment.studyadvance.memoryoptimization.MemoryOptimizationActivity">
         </activity>
         <activity android:name=".studyfragment.studyadvance.memoryoptimization.MemorySecondActivity">
+        </activity>
+        <activity android:name=".studyfragment.studyadvance.greenDAO.GreenDAOActivity">
         </activity>
     </application>
 

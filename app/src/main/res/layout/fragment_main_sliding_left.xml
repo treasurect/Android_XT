@@ -4,11 +4,32 @@
              android:layout_height="match_parent"
               android:orientation="vertical"
              android:id="@+id/main_sliding_menu_left_layout"
-              android:background="#45353f"
+              android:background="#e6065c"
              tools:context="com.treasure_ct.android_xt.slidingfragment.SlidingMainLeftFragment">
-    <ImageView
-        android:id="@+id/left_weather_img"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/icon_weather"/>
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/item_slidingmenu_left_bg">
+        <ImageView
+            android:id="@+id/left_weather_img"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="20dp"
+            android:src="@mipmap/icon_weather"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/item_slidingmenu_left_bg">
+        <ImageView
+            android:id="@+id/left_video_recording_img"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="20dp"
+            android:src="@mipmap/icon_video_recording"/>
+    </FrameLayout>
 </LinearLayout>

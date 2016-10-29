@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'org.greenrobot.greendao'
 android {
     signingConfigs {
         Android {
@@ -17,6 +17,8 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.Android
+        //开启MultiDex的支持
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -47,7 +49,6 @@ dependencies {
     compile files('libs/AMap3DMap_4.0.1_AMapSearch_3.5.0_AMapLocation_3.0.0_20160927.jar')
     compile project(':zxing_xt')
     compile project(':butterknife_xt')
-    compile project(':sharesdk_share_xt')
     compile project(':sharesdk_weather_xt')
     compile project(':qq_support_xt')
     compile project(':sharesdk_sms_xt')
@@ -74,4 +75,7 @@ dependencies {
     compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
     compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7-kotlin:0.4.0'
     compile 'com.jakewharton.rxbinding:rxbinding-support-v4:0.4.0'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile project(':share_common_xt')
 }

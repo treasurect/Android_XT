@@ -1,6 +1,7 @@
 package com.treasure_ct.android_xt;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
+
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
 
@@ -13,7 +14,7 @@ import cn.smssdk.SMSSDK;
  * Created by treasure on 2016.10.21.
  */
 
-public class XTApplication extends Application{
+public class XTApplication extends MultiDexApplication{
     @Override
     public void onCreate() {
         super.onCreate();
