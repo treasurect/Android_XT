@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainDialogFragment extends DialogFragment implements View.OnClickListener{
+public class   MainDialogFragment extends DialogFragment implements View.OnClickListener{
     private Weather mWeatherAPI;
     private EditText edit;
     private TextView textloc,weather_detail,weather_future_detail1,weather_future_detail2,weather_future_detail3,weather_future_detail4,weather_future_detail5;

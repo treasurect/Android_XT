@@ -4,14 +4,12 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
-import com.mob.commons.SMSSDK;
 import com.treasure_ct.android_xt.cartfragment.CartFragment;
 import com.treasure_ct.android_xt.minefragment.MineFragment;
-import com.treasure_ct.android_xt.relaxfragment.RelaxFragment;
+import com.treasure_ct.android_xt.relaxfragment.video.RelaxVideoFragment;
 import com.treasure_ct.android_xt.slidingfragment.SlidingMainLeftFragment;
 import com.treasure_ct.android_xt.slidingfragment.SlidingMainRightFragment;
 import com.treasure_ct.android_xt.studyfragment.StudyFragment;
@@ -84,7 +82,7 @@ public class MainActivity extends SlidingFragmentActivity implements RadioGroup.
                 bottom_id = 0;
                 break;
             case R.id.main_rB02:
-                transaction.replace(R.id.main_frame,new RelaxFragment());
+                transaction.replace(R.id.main_frame,new RelaxVideoFragment());
                 initRBtextColor();
                 rb02.setTextColor(R.color.mylove);
                 bottom_id = 1;

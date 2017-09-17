@@ -80,7 +80,7 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn1:
-                break;
+                 break;
             case R.id.btn2:
                 finish();
                 break;

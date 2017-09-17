@@ -16,7 +16,7 @@ import com.treasure_ct.android_xt.R;
 /**
  * Created by treasure on 2016.08.29.
  */
-public class ImageActivity extends AppCompatActivity {
+public class                                                                                                                     ImageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

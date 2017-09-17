@@ -56,6 +56,7 @@ public class MusicBindService extends Service {
         return super.onUnbind(intent);
     }
 
+
     @Override
     public void onDestroy() {
         if (player.isPlaying()){
@@ -66,3 +67,6 @@ public class MusicBindService extends Service {
         super.onDestroy();
     }
 }
+
+
+

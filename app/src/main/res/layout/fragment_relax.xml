@@ -3,7 +3,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
               android:orientation="vertical"
-             tools:context="com.treasure_ct.android_xt.relaxfragment.RelaxFragment">
+             tools:context="com.treasure_ct.android_xt.relaxfragment.video.RelaxVideoFragment">
 
     <SurfaceView
         android:id="@+id/relax_video_view"

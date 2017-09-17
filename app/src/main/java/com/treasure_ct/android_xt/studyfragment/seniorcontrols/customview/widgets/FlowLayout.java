@@ -88,6 +88,7 @@ public class FlowLayout extends ViewGroup{
         int lastBottom = 20;
         int lastLeft = 20;
         //每行最高尺寸
+
         int maxHeight = 0;
         for (int i = 0; i < count; i++) {
             View child = getChildAt(i);

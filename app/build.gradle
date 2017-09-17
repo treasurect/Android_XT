@@ -55,6 +55,7 @@ dependencies {
     compile project(':im_huanxin_xt')
     compile name: 'SMSSDK-2.1.2', ext: 'aar'
     compile name: 'SMSSDKGUI-2.1.2', ext: 'aar'
+    compile project(':share_common_xt')
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:gridlayout-v7:24.2.1'
     compile 'com.github.stuxuhai:jpinyin:1.1.7'
@@ -65,7 +66,6 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'org.xutils:xutils:3.3.36'
     compile 'org.greenrobot:eventbus:3.0.0'
-    testCompile 'junit:junit:4.12'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
@@ -77,5 +77,5 @@ dependencies {
     compile 'com.jakewharton.rxbinding:rxbinding-support-v4:0.4.0'
     compile 'org.greenrobot:greendao:3.2.0'
     compile 'com.android.support:multidex:1.0.1'
-    compile project(':share_common_xt')
+    testCompile 'junit:junit:4.12'
 }

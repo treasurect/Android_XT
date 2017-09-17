@@ -1,9 +1,11 @@
 package com.treasure_ct.android_xt.welcomfragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.ImageView;
 
 import java.util.List;
@@ -23,7 +25,7 @@ public class WelPagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return Integer.MAX_VALUE;
+        return 10000;
     }
 
     @Override
@@ -33,9 +35,17 @@ public class WelPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        Object ret = null;
-        ImageView imageView = new ImageView(context);
-
+        View ret = null;
+        position = position % list.size();
+            ImageView imageView = new ImageView(context);
+            imageView.setBackgroundResource(list.get(position));
+            ret = imageView;
+        container.addView(ret);
         return ret;
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        container.removeView((View) object);
     }
 }

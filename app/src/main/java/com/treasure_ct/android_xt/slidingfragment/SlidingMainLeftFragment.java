@@ -10,10 +10,6 @@ import android.widget.ImageView;
 
 import com.treasure_ct.android_xt.R;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class SlidingMainLeftFragment extends Fragment implements View.OnClickListener {
    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
